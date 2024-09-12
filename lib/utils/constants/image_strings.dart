@@ -8,4 +8,11 @@ class PImages {
 
   // -- Signup
   static const String signupImage = "assets/images/signup-screen-image.png";
+
+  // -- Forgot Password
+  static const String forgotPassword = "assets/images/forgot-password-screen-image.png";
+  static const String enterOtp = "assets/images/pin-screen-image.png";
+  static const String passwordUpdate = "assets/images/password-update-screen-image.png";
+
+  static const String qrCode = "assets/images/qr-code.png";
 }

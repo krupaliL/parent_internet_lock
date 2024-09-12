@@ -14,7 +14,7 @@ class PElevatedButtonTheme {
       disabledBackgroundColor: Colors.grey,
       side: BorderSide.none,
       padding: const EdgeInsets.symmetric(vertical: 18),
-      textStyle: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
+      textStyle: const TextStyle(fontSize: 16, fontFamily: 'LexendDeca', color: Colors.white, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
     ),
   );

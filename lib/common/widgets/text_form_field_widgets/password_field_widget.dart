@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:parent_internet_lock/utils/constants/colors.dart';
 
 import '../../../utils/validators/validation.dart';
@@ -8,13 +9,13 @@ class PPasswordFieldWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.prefixIcon,
-    required this.suffixIcon,
+    // required this.suffixIcon,
     required this.validateText,
   });
 
   final String title;
   final IconData prefixIcon;
-  final IconData suffixIcon;
+  // final IconData suffixIcon;
   final String validateText;
 
   @override
@@ -57,6 +58,7 @@ class PPasswordFieldWidget extends StatelessWidget {
               Expanded(
                 child: TextFormField(
                   validator: (value) => PValidator.validateEmptyText(validateText, value),
+                  obscureText: true,
                   style: const TextStyle(
                     color: PColors.primary,
                     fontSize: 13,
@@ -66,7 +68,7 @@ class PPasswordFieldWidget extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              Icon(suffixIcon, color: PColors.primary),
+              const Icon(Iconsax.eye_slash, color: PColors.primary),
               const SizedBox(width: 12),
             ],
           ),

@@ -4,10 +4,13 @@ import '../../../utils/constants/colors.dart';
 
 class PElevatedButtonWidget extends StatelessWidget {
   const PElevatedButtonWidget({
-    super.key, required this.title,
+    super.key,
+    required this.title,
+    this.onPressed,
   });
 
   final String title;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +22,14 @@ class PElevatedButtonWidget extends StatelessWidget {
             color: PColors.grey.withOpacity(0.7), // Shadow color
             spreadRadius: 0.3, // Spread radius
             blurRadius: 4, // Blur radius
-            offset: Offset(0, 0), // Offset in x and y direction
+            offset: const Offset(0, 0), // Offset in x and y direction
           ),
         ],
       ),
       child: SizedBox(
         width: double.infinity,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(title),
         ),
       ),

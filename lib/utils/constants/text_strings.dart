@@ -25,6 +25,7 @@ class PTexts {
   static const String verificationCode = "verificationCode";
   static const String done = "Done";
   static const String send = "Send";
+  static const String save = "Save";
   static const String scanORCode = "Scan OR code";
 
   // Heading Text
@@ -40,6 +41,10 @@ class PTexts {
   static const String benefitsOfPremiumSubTitle1 = "Easy to access your device internet enable & disable.";
   static const String benefitsOfPremiumSubTitle2 = "Scan Qr code to invite your family member.";
   static const String benefitsOfPremiumSubTitle3 = "Set timer to automatically disconnect devices. ";
+
+  static const String forgotPIN = "Forgot PIN?";
+  static const String enterPIN = "Enter PIN";
+  static const String confirmPIN = "Confirm PIN";
 
   // Subscription
   static const String currentSubscription = "Current subscription";

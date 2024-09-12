@@ -14,8 +14,9 @@ class SignupScreen extends StatelessWidget {
           padding: PSpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
-              /// Login Image
+              /// Signup Image
               Image(image: AssetImage(PImages.signupImage)),
+              SizedBox(height: 30.0),
 
               /// Form
               PSignupForm(),
