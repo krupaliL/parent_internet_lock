@@ -32,12 +32,12 @@ class PAppBar extends StatelessWidget implements PreferredSizeWidget {
             ? IconButton(onPressed: () => Get.back(), icon: const Icon(size: 24, Icons.arrow_back), color: PColors.black)
             : leadingIcon != null ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) : null,
         title: title,
+        centerTitle: true,
         actions: actions,
       ),
     );
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(PDeviceUtils.getAppBarHeight());
 }

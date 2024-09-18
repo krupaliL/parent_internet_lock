@@ -11,7 +11,13 @@ class PColors {
 
   // Font
   static const Color darkBlue = Color(0xFF101828);
-  
+
+  // Tile
+  static const Color enableColor = Color(0x1A058104);
+  static const Color disableColor = Color(0x1A000000);
+  static const Color internetColor = Color(0xFF058104);
+  static const Color delete = Color(0xFFEC1E1E);
+
   // Neutral colors
   static const Color white = Color(0xFFFFFFFF);
   static const Color grey = Color(0xFF9E9E9E);

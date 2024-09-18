@@ -4,6 +4,7 @@ import 'package:parent_internet_lock/common/widgets/text_form_field_widgets/pass
 import 'package:parent_internet_lock/features/authentication/screens/other_person_login/other_person_login.dart';
 import 'package:parent_internet_lock/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:parent_internet_lock/features/authentication/screens/signup/signup.dart';
+import 'package:parent_internet_lock/navigation_menu.dart';
 import 'package:parent_internet_lock/utils/constants/colors.dart';
 import 'package:parent_internet_lock/utils/constants/text_strings.dart';
 import '../../../../../common/widgets/elevated_button_widgets/elevated_button_widget.dart';
@@ -52,7 +53,7 @@ class PLoginForm extends StatelessWidget {
           const SizedBox(height: 15),
 
           /// Login Button
-          PElevatedButtonWidget(onPressed: () {}, title: PTexts.login),
+          PElevatedButtonWidget(onPressed: () => Get.to(() => const NavigationMenu()), title: PTexts.login),
           const SizedBox(height: 15),
 
           /// Scanner Button
