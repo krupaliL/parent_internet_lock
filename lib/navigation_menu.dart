@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:parent_internet_lock/features/authentication/screens/login/login.dart';
 import 'package:parent_internet_lock/features/authentication/screens/other_person_login/other_person_login.dart';
+import 'package:parent_internet_lock/features/internet/screens/minutes.dart';
 import 'package:parent_internet_lock/utils/constants/colors.dart';
 
-import 'features/internet/home.dart';
+import 'features/internet/screens/home.dart';
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
 
@@ -37,5 +37,9 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
 
-  final screens = [HomeScreen(), const LoginScreen(), const OtherPersonLoginScreen()];
+  final screens = [
+    HomeScreen(),
+    const MinutesScreen(),
+    const OtherPersonLoginScreen()
+  ];
 }

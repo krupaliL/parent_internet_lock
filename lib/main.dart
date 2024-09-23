@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
-import 'package:parent_internet_lock/features/splash_screen.dart';
+import 'package:parent_internet_lock/features/personalization/screens/splash_screen.dart';
 import 'package:parent_internet_lock/utils/theme/theme.dart';
 
 void main() {

@@ -15,4 +15,7 @@ class PImages {
   static const String passwordUpdate = "assets/images/password-update-screen-image.png";
 
   static const String qrCode = "assets/images/qr-code.png";
+
+  // -- Icons
+  static const String checkIcon = "assets/icons/check-rounded.png";
 }
