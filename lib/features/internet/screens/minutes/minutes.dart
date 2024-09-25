@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:parent_internet_lock/common/widgets/appbar/appbar.dart';
-import 'package:parent_internet_lock/features/internet/screens/widgets/minutes_tile.dart';
+import 'package:parent_internet_lock/features/internet/screens/minutes/widgets/minutes_tile.dart';
 
-import '../../../utils/constants/colors.dart';
+import '../../../../utils/constants/colors.dart';
 
 class MinutesScreen extends StatelessWidget {
   const MinutesScreen({
@@ -23,7 +23,7 @@ class MinutesScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 10),
-            Expanded(child: ToggleList()),
+            Expanded(child: MinutesList()),
           ],
         ),
       )

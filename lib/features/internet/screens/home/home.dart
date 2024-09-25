@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:parent_internet_lock/features/internet/models/device_list_model.dart';
-import 'package:parent_internet_lock/features/internet/screens/widgets/device_card_widget.dart';
-import 'package:parent_internet_lock/features/internet/screens/widgets/home_appbar.dart';
+import 'package:parent_internet_lock/features/internet/screens/home/widgets/device_card_widget.dart';
+import 'package:parent_internet_lock/features/internet/screens/home/widgets/home_appbar.dart';
 
-import '../../../utils/constants/colors.dart';
+import '../../../../utils/constants/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});

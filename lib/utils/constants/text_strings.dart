@@ -37,17 +37,34 @@ class PTexts {
   static const String scannerSubTitle1 = "Scan OR code to Link a device";
   static const String scannerSubTitle2 = "Share it with family member, they can scan it with their wifi controller camera to add device.";
   static const String noDevice = "There are no Device found!";
+
+  // -- Subscription
   static const String benefitsOfPremium = "Benefits of premium";
   static const String benefitsOfPremiumSubTitle1 = "Easy to access your device internet enable & disable.";
   static const String benefitsOfPremiumSubTitle2 = "Scan Qr code to invite your family member.";
-  static const String benefitsOfPremiumSubTitle3 = "Set timer to automatically disconnect devices. ";
+  static const String benefitsOfPremiumSubTitle3 = "Set timer to automatically disconnect devices.";
+  static const String freeTrial = "START FREE TRIAL";
+  static const String freeTrial7Days = "7-days free trial, then \$1/month";
 
-  static const String forgotPIN = "Forgot PIN?";
-  static const String enterPIN = "Enter PIN";
-  static const String confirmPIN = "Confirm PIN";
+  static const String basic = "Basic";
+  static const String member2 = "2 Member";
+  static const String dollar1 = "\$1/";
 
-  // Subscription
+  static const String plus = "Plus";
+  static const String member5 = "5 Member";
+  static const String dollar2 = "\$2/";
+
+  static const String gold = "Gold";
+  static const String member10 = "10 Member";
+  static const String dollar3 = "\$3/";
+
+  // Subscription Plan
   static const String currentSubscription = "Current subscription";
   static const String expireOn = "Expire on";
   static const String cancelSubscription = "Cancel subscription";
+
+  // -- PIN
+  static const String forgotPIN = "Forgot PIN?";
+  static const String enterPIN = "Enter PIN";
+  static const String confirmPIN = "Confirm PIN";
 }

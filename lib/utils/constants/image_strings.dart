@@ -16,6 +16,19 @@ class PImages {
 
   static const String qrCode = "assets/images/qr-code.png";
 
+  // -- Subscription
+  static const String subscription = "assets/images/subscription-image.png";
+
   // -- Icons
   static const String checkIcon = "assets/icons/check-rounded.png";
+
+  // -- Setting Screen Icons
+  static const String userIcon = "assets/icons/user-icon.png";
+  static const String penIcon = "assets/icons/pen-icon.png";
+  static const String keyIcon = "assets/icons/key-icon.png";
+  static const String shareQRIcon = "assets/icons/share-qr-icon.png";
+  static const String scanQRIcon = "assets/icons/scan-qr-icon.png";
+  static const String subscriptionIcon = "assets/icons/subscription-icon.png";
+  static const String aboutUsIcon = "assets/icons/about-us-icon.png";
+  static const String logoutIcon = "assets/icons/logout-icon.png";
 }

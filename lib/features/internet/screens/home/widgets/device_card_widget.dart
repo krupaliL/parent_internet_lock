@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/colors.dart';
 
 
 class PDeviceCard extends StatelessWidget {
@@ -23,6 +23,7 @@ class PDeviceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),  // borderRadius of 5
       ),

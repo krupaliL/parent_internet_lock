@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:parent_internet_lock/utils/constants/image_strings.dart';
 
-import '../../../../utils/constants/colors.dart';
-import '../../controllers/minutes_controller.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../controllers/minutes_controller.dart';
 
-class ToggleList extends StatelessWidget {
-  ToggleList({super.key});
+class MinutesList extends StatelessWidget {
+  MinutesList({super.key});
 
   // Initialize the controller
   final MinutesController controller = Get.put(MinutesController());
