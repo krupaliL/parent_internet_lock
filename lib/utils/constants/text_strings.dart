@@ -66,5 +66,6 @@ class PTexts {
   // -- PIN
   static const String forgotPIN = "Forgot PIN?";
   static const String enterPIN = "Enter PIN";
+  static const String enterNewPIN = "Enter New PIN";
   static const String confirmPIN = "Confirm PIN";
 }

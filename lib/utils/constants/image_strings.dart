@@ -14,6 +14,7 @@ class PImages {
   static const String enterOtp = "assets/images/pin-screen-image.png";
   static const String passwordUpdate = "assets/images/password-update-screen-image.png";
 
+  static const String noDeviceFoundImage = "assets/images/no-device-found-image.png";
   static const String qrCode = "assets/images/qr-code.png";
 
   // -- Subscription

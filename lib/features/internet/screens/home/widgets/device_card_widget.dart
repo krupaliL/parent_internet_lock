@@ -25,7 +25,7 @@ class PDeviceCard extends StatelessWidget {
     return Card(
       elevation: 0,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(5),  // borderRadius of 5
+        borderRadius: BorderRadius.circular(5),
       ),
       color: backgroundColor,
       margin: const EdgeInsets.symmetric(vertical: 10.0),
@@ -37,12 +37,17 @@ class PDeviceCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+
+                /// Name of user
                 Text(
                   name,
                   style: const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 16.0, color: PColors.black),
                 ),
+
                 Row(
                   children: [
+
+                    /// Device Name
                     Text(
                       device,
                       style: const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 12.0, color: PColors.black50),
@@ -56,45 +61,39 @@ class PDeviceCard extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 4),
+            // const SizedBox(height: 4),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+
+                /// Internet Status (enable/disable)
                 Text(
                   isOnline ? status : '',
                   style: const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 12.0, color: PColors.internetColor),
                 ),
-                const SizedBox(height: 8),
+                // const SizedBox(height: 8),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Icon(
-                      Icons.power_settings_new_rounded,
+
+                    /// Power Button
+                    IconButton(
+                      // iconSize: 24,
+                      onPressed: () {},
+                      icon: const Icon(Icons.power_settings_new_rounded),
                       color: isOnline ? PColors.internetColor : PColors.black50,
                     ),
-                    const SizedBox(width: 16),
-                    const Icon(
-                      Icons.delete_rounded,
-                      color: PColors.delete,
-                    ),
+                    // const SizedBox(width: 16),
 
-                    /*
-
+                    /// Delete Button
                     IconButton(
                       onPressed: () {},
-                      padding: EdgeInsets.all(0.0),
-                      icon: Icon(Icons.power_settings_new_rounded),
-                      color: isOnline ? PColors.internetColor : PColors.black50,
-                    ),
-                    const SizedBox(width: 16),
-                    IconButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.all(0.0),
-                      icon: Icon(Icons.delete_rounded),
+                      // padding: EdgeInsets.only(right: 0.0),
+                      icon: const Icon(Icons.delete_rounded),
                       color: PColors.delete,
                     ),
-
-                    */
                   ],
                 ),
               ],

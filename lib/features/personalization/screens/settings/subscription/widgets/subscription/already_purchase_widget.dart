@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../../../../utils/constants/colors.dart';
-import '../../../../../../authentication/screens/signup/signup.dart';
 
 class PAlreadyPurchaseWidget extends StatelessWidget {
   const PAlreadyPurchaseWidget({
@@ -19,7 +17,7 @@ class PAlreadyPurchaseWidget extends StatelessWidget {
           style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w500, fontSize: 12.0, color: PColors.black32),
         ),
         TextButton(
-          onPressed: () => Get.to(() => const SignupScreen()),
+          onPressed: () {},
           style: ButtonStyle(
             overlayColor: WidgetStateProperty.all(Colors.transparent),
           ),

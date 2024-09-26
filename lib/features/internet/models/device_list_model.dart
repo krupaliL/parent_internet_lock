@@ -45,4 +45,6 @@ class DeviceListModel{
       'backgroundColor': Colors.green.shade100
     }
   ];
+
+  // static List<Map<String, dynamic>> deviceList = [];
 }

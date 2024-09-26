@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:parent_internet_lock/common/widgets/text_form_field_widgets/password_field_widget.dart';
 import 'package:parent_internet_lock/utils/constants/text_strings.dart';
-import '../../../../../common/widgets/elevated_button_widgets/elevated_button_widget.dart';
 import '../../../../../common/widgets/text_form_field_widgets/text_form_field_widget.dart';
 
 class PSignupForm extends StatelessWidget {
@@ -10,43 +9,40 @@ class PSignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
+    return const Form(
       child: Column(
         children: [
           /// Name
-          const PTextFormFieldWidget(
+          PTextFormFieldWidget(
             title: PTexts.name,
             prefixIcon: Iconsax.user,
             validateText: 'name',
           ),
-          const SizedBox(height: 28),
+          SizedBox(height: 28),
 
           /// Email
-          const PTextFormFieldWidget(
+          PTextFormFieldWidget(
             title: PTexts.email,
             prefixIcon: Icons.mail_outline,
             validateText: 'email',
           ),
-          const SizedBox(height: 28),
+          SizedBox(height: 28),
 
           /// Password
-          const PPasswordFieldWidget(
+          PPasswordFieldWidget(
             title: PTexts.password,
             prefixIcon: Icons.lock_outline,
             validateText: 'password',
           ),
-          const SizedBox(height: 28),
+          SizedBox(height: 28),
 
           /// Confirm Password
-          const PPasswordFieldWidget(
+          PPasswordFieldWidget(
             title: PTexts.confirmPassword,
             prefixIcon: Icons.lock_outline,
             validateText: 'password',
           ),
-          const SizedBox(height: 32),
-
-          /// Register Button
-          PElevatedButtonWidget(onPressed: () {}, title: PTexts.register),
+          SizedBox(height: 32),
         ],
       ),
     );
