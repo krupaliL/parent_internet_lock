@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parent_internet_lock/utils/constants/colors.dart';
 import 'package:parent_internet_lock/utils/theme/custom_themes/elevated_button_theme.dart';
+import 'package:parent_internet_lock/utils/theme/custom_themes/outline_button_theme.dart';
 import 'package:parent_internet_lock/utils/theme/custom_themes/text_field_theme.dart';
 
 class PAppTheme {
@@ -14,6 +15,7 @@ class PAppTheme {
     primaryColor: PColors.primary,
     scaffoldBackgroundColor: Colors.white,
     elevatedButtonTheme: PElevatedButtonTheme.lightElevatedButtonTheme,
+    outlinedButtonTheme: POutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: PTextFormFieldTheme.lightInputDecorationTheme,
   );
 }

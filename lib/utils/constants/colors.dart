@@ -11,6 +11,9 @@ class PColors {
 
   // Font
   static const Color darkBlue = Color(0xFF101828);
+  static const Color outlinedForegroundLogout = Color(0xFF344054);
+  static const Color outlinedForeground = Color(0xFF001E2F);
+  static const Color outlinedBorder = Color(0xFFD0D5DD);
 
   // Tile
   static const Color enableColor = Color(0x1A058104);

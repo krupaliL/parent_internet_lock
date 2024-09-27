@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:parent_internet_lock/common/widgets/smart_dialogs/enter_name_popup.dart';
+import 'package:parent_internet_lock/common/widgets/smart_dialogs/logout_popup.dart';
 import 'package:parent_internet_lock/features/authentication/screens/other_person_login/other_person_login.dart';
 import 'package:parent_internet_lock/features/authentication/screens/password_configuration/enter_pin.dart';
 import 'package:parent_internet_lock/features/personalization/screens/settings/subscription/subscription.dart';
@@ -36,10 +39,18 @@ class SettingsScreen extends StatelessWidget {
                       // const SizedBox(height: 10),
 
                       /// Setting Tiles
-                      const PSettingsMenuTile(
+                      PSettingsMenuTile(
                         prefixImage: PImages.userIcon,
                         title: 'Profile Name',
                         profileIcon: true,
+                        onTap: () {
+                          // Show the custom dialog
+                          SmartDialog.show(
+                            builder: (_) {
+                              return const EnterNamePopup();
+                            },
+                          );
+                        },
                       ),
                       const SizedBox(height: 10),
 
@@ -76,10 +87,18 @@ class SettingsScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
 
-                      const PSettingsMenuTile(
+                      PSettingsMenuTile(
                         prefixImage: PImages.logoutIcon,
                         title: 'Log out',
                         endIcon: false,
+                        onTap: () {
+                          // Show the custom dialog
+                          SmartDialog.show(
+                            builder: (_) {
+                              return const LogoutPopup();
+                            },
+                          );
+                        },
                       ),
                     ],
                   ),

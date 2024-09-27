@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:parent_internet_lock/common/widgets/smart_dialogs/free_trial_popup.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../utils/constants/colors.dart';
@@ -41,68 +43,11 @@ class OtherPersonLoginScreen extends StatelessWidget {
             /// QR Code
             GestureDetector(
               onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    content: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                          decoration: BoxDecoration(
-                            border: Border.all(color: PColors.primary, width: 1.5), // Border around the text
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          child: const Text(
-                            "7-days free trial, then \$1/month",
-                            style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w600, fontSize: 14.0, color: PColors.primary),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.of(context).pop(); // Close the dialog
-                              },
-                              style: ElevatedButton.styleFrom(
-                                fixedSize: const Size(138, 44),
-                                backgroundColor: PColors.primary, // OK button color
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                              child: const Text(
-                                "OK",
-                                style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w500, fontSize: 16.0, color: PColors.white),
-                              ),
-                            ),
-                            const SizedBox(height: 22.0),
-                            OutlinedButton(
-                              onPressed: () {
-                                Navigator.of(context).pop(); // Close the dialog
-                              },
-                              style: OutlinedButton.styleFrom(
-                                fixedSize: const Size(138, 44),
-                                side: const BorderSide(color: PColors.black50),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                              child: const Text(
-                                "Cancel",
-                                style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w500, fontSize: 16.0, color: PColors.black50),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
+                // Show the custom dialog
+                SmartDialog.show(
+                  builder: (_) {
+                    return const FreeTrialPopup();
+                  },
                 );
               },
               child: const Padding(

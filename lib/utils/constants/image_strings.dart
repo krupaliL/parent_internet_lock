@@ -22,6 +22,7 @@ class PImages {
 
   // -- Icons
   static const String checkIcon = "assets/icons/check-rounded.png";
+  static const String logoutPopupIcon = "assets/icons/logout-popup-icon.png";
 
   // -- Setting Screen Icons
   static const String userIcon = "assets/icons/user-icon.png";

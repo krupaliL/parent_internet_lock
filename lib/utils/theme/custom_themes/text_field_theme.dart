@@ -7,7 +7,7 @@ class PTextFormFieldTheme {
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
     // labelStyle: const TextStyle().copyWith(fontSize: 13, color: PColors.primary),
-    // hintStyle: const TextStyle().copyWith(fontSize: 14, color: PColors.primary),
+    hintStyle: const TextStyle().copyWith(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 14, color: PColors.black50),
     errorStyle: const TextStyle().copyWith(fontSize: 13, color: PColors.error),
     // floatingLabelStyle: const TextStyle().copyWith(color: PColors.primary.withOpacity(0.8)),
     border: InputBorder.none,

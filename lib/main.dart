@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:parent_internet_lock/features/personalization/screens/splash/splash_screen.dart';
 import 'package:parent_internet_lock/utils/theme/theme.dart';
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: PAppTheme.lightTheme,
       home: const SplashScreen(),
+      builder: (context, widget) {
+        return FlutterSmartDialog(child: widget!);
+      },
     );
   }
 }

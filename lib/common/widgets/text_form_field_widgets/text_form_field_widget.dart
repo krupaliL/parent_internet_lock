@@ -61,9 +61,10 @@ class PTextFormFieldWidget extends StatelessWidget {
                   child: TextFormField(
                     validator: (value) => PValidator.validateEmptyText(validateText, value),
                     style: const TextStyle(
-                      color: PColors.primary, // Change text color here
+                      color: PColors.primary,
                       fontSize: 13,
-                      fontFamily: 'LexendDeca', fontWeight: FontWeight.w400,
+                      fontFamily: 'LexendDeca',
+                      fontWeight: FontWeight.w400,
                     ),
                     cursorColor: PColors.primary,
                   ),

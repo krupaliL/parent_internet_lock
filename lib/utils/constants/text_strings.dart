@@ -26,6 +26,7 @@ class PTexts {
   static const String done = "Done";
   static const String send = "Send";
   static const String save = "Save";
+  static const String cancel = "Cancel";
   static const String scanORCode = "Scan OR code";
 
   // Heading Text
