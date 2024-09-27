@@ -9,6 +9,14 @@ class PAppTheme {
 
   /// Light Theme
   static ThemeData lightTheme = ThemeData(
+    navigationBarTheme: NavigationBarThemeData(
+      labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>((states) {
+        if (states.contains(WidgetState.selected)) {
+          return const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w600, fontSize: 12.0, color: PColors.primary);
+        }
+        return const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w600, fontSize: 12.0, color: PColors.black50);
+      }),
+    ),
     useMaterial3: true,
     fontFamily: 'LexendDeca',
     brightness: Brightness.light,

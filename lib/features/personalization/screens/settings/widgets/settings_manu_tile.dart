@@ -33,10 +33,10 @@ class PSettingsMenuTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5), // Shadow color
-            spreadRadius: 0.3, // Spread radius
-            blurRadius: 0.5, // Blur radius
-            offset: const Offset(0, 0), // Offset in x and y direction
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 0.3,
+            blurRadius: 0.5,
+            offset: const Offset(0, 0),
           ),
         ],
       ),

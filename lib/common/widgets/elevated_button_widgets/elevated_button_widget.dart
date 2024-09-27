@@ -19,10 +19,10 @@ class PElevatedButtonWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(5.0),
         boxShadow: [
           BoxShadow(
-            color: PColors.grey.withOpacity(0.7), // Shadow color
-            spreadRadius: 0.3, // Spread radius
-            blurRadius: 4, // Blur radius
-            offset: const Offset(0, 0), // Offset in x and y direction
+            color: PColors.grey.withOpacity(0.7),
+            spreadRadius: 0.3,
+            blurRadius: 4,
+            offset: const Offset(0, 0),
           ),
         ],
       ),

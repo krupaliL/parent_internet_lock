@@ -38,10 +38,10 @@ class PPasswordFieldWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(5.0),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.5), // Shadow color
-                  spreadRadius: 0.3, // Spread radius
-                  blurRadius: 2, // Blur radius
-                  offset: const Offset(0, 0), // Offset in x and y direction
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 0.3,
+                  blurRadius: 2,
+                  offset: const Offset(0, 0),
                 ),
               ],
             ),

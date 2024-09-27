@@ -16,51 +16,64 @@ class ForgotPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PAppBar(showBackArrow: true),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              /// Forgot Password Image
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: Image(image: AssetImage(PImages.forgotPassword)),
-              ),
-              const SizedBox(height: 55),
 
-              /// Text
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const Expanded(
+              child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Text(
-                      PTexts.forgetPasswordTitle,
-                      style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w700, fontSize: 24.0, color: PColors.primary),
-                      textAlign: TextAlign.center,
+                    /// Forgot Password Image
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Image(height: 310, width: 275, image: AssetImage(PImages.forgotPassword)),
                     ),
-                    SizedBox(height: 16),
-                    Text(
-                      PTexts.forgetPasswordSubTitle,
-                      style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 14.0, color: PColors.primary),
-                      textAlign: TextAlign.center,
+                    SizedBox(height: 30),
+
+                    /// Text
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            PTexts.forgetPasswordTitle,
+                            style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w700, fontSize: 24.0, color: PColors.primary),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            PTexts.forgetPasswordSubTitle,
+                            style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 14.0, color: PColors.primary),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
+                    SizedBox(height: 20),
+
+                    /// Email
+                    PTextFormFieldWidget(
+                      title: PTexts.email,
+                      prefixIcon: Icons.mail_outline,
+                      validateText: 'email',
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
               ),
-              const SizedBox(height: 30),
+            ),
 
-              /// Email
-              const PTextFormFieldWidget(
-                title: PTexts.email,
-                prefixIcon: Icons.mail_outline,
-                validateText: 'email',
-              ),
-              const SizedBox(height: 60),
+            Column(
+              children: [
+                const SizedBox(height: 10),
 
-              /// Send Button
-              PElevatedButtonWidget(onPressed: () => Get.to(() => const UpdatePasswordScreen()), title: PTexts.send),
-            ],
-          ),
+                /// Send Button
+                PElevatedButtonWidget(onPressed: () => Get.to(() => const UpdatePasswordScreen()), title: PTexts.send),
+              ],
+            ),
+          ],
         ),
       ),
     );

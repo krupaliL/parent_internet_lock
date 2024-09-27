@@ -115,6 +115,7 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 15),
             ],
           ),
         )

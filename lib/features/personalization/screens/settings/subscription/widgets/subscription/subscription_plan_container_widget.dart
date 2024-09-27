@@ -25,20 +25,19 @@ class PSubscriptionPlanContainerWidget extends StatelessWidget {
         border: isSelected ? Border.all(color: PColors.primary) : Border.all(color: PColors.primary, width: 1.5),
         boxShadow: [
           isSelected ? BoxShadow(
-            color: Colors.white.withOpacity(0.5), // Shadow color
-            spreadRadius: 0.3, // Spread radius
-            blurRadius: 1, // Blur radius
-            offset: const Offset(0, 0), // Offset in x and y direction
+            color: Colors.white.withOpacity(0.5),
+            spreadRadius: 0.3,
+            blurRadius: 1,
+            offset: const Offset(0, 0),
           ) : BoxShadow(
-            color: Colors.grey.withOpacity(0.4), // Shadow color
-            spreadRadius: 1.5, // Spread radius
-            blurRadius: 1, // Blur radius
-            offset: const Offset(0, 0), // Offset in x and y direction
+            color: Colors.grey.withOpacity(0.4),
+            spreadRadius: 1.5,
+            blurRadius: 1,
+            offset: const Offset(0, 0),
           ),
         ],
         color: isSelected ? PColors.primary : PColors.white,
       ),
-
 
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

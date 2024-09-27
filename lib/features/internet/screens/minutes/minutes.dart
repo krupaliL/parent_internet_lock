@@ -24,6 +24,7 @@ class MinutesScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
             Expanded(child: MinutesList()),
+            // const SizedBox(height: 10),
           ],
         ),
       )
