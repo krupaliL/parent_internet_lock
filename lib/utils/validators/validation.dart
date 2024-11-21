@@ -10,7 +10,7 @@ class PValidator {
 
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Please enter correct Email.';
+      return 'Please enter your Email.';
     }
 
     // Regular expression for email validation
@@ -24,7 +24,7 @@ class PValidator {
 
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Please enter correct Password.';
+      return 'Please enter Password.';
     }
 
     // Check for minimum password length

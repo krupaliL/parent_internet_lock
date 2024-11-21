@@ -16,29 +16,31 @@ class EnterPinScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: PSpacingStyle.paddingWithAppBarHeight,
-        child: Column(
-          children: [
-            const SizedBox(height: 20.0),
-            /// Enter PIN Image
-            const Image(image: AssetImage(PImages.enterOtp),),
-            const SizedBox(height: 30.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 20.0),
+              /// Enter PIN Image
+              const Image(image: AssetImage(PImages.enterOtp),),
+              const SizedBox(height: 30.0),
 
-            /// Enter PIN
-            const PPinputWidgetWithTitle(title: PTexts.enterPIN),
+              /// Enter PIN
+              const PPinputWidgetWithTitle(title: PTexts.enterPIN),
 
-            /// Forgot PIN
-            TextButton(
-              onPressed: () => Get.to(() => const ConfirmPinScreen()),
-              style: ButtonStyle(
-                overlayColor: WidgetStateProperty.all(Colors.transparent),
+              /// Forgot PIN
+              TextButton(
+                onPressed: () => Get.to(() => const ConfirmPinScreen()),
+                style: ButtonStyle(
+                  overlayColor: WidgetStateProperty.all(Colors.transparent),
+                ),
+                child: const Text(
+                  PTexts.forgotPIN,
+                  style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w500, fontSize: 14.0, color: PColors.primary),
+                  textAlign: TextAlign.center,
+                ),
               ),
-              child: const Text(
-                PTexts.forgotPIN,
-                style: TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w500, fontSize: 14.0, color: PColors.primary),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -2,9 +2,6 @@
 /// This class contains all the App Text in String formats.
 class PTexts {
 
-  // -- GLOBAL Texts
-  static const String pContinue = "Continue";
-
   // -- OnBoarding Texts
   static const String splashTitle = "Parent Internet Lock";
   static const String splashSubTitle = "Connect, Secure, Control.";
@@ -28,6 +25,8 @@ class PTexts {
   static const String save = "Save";
   static const String cancel = "Cancel";
   static const String scanORCode = "Scan OR code";
+  static const String resendEmail = "Resend Email";
+  static const String pContinue = "Continue";
 
   // Heading Text
   static const String forgetPasswordTitle = "Forgot password";
@@ -38,6 +37,12 @@ class PTexts {
   static const String scannerSubTitle1 = "Scan OR code to Link a device";
   static const String scannerSubTitle2 = "Share it with family member, they can scan it with their wifi controller camera to add device.";
   static const String noDevice = "There are no Device found!";
+  static const String confirmEmail = "Verify your email address!";
+  static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to manage Internet Usage.";
+  static const String yourAccountCreatedTitle = "Your account successfully created!";
+  static const String yourAccountCreatedSubTitle = "Welcome to Your Dashboard: Your Account is Created, Now You're free to manage your Internet usage!";
+  static const String changeYourPasswordTitle = "Password Reset Email Sent";
+  static const String changeYourPasswordSubTitle = "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
 
   // -- Subscription
   static const String benefitsOfPremium = "Benefits of premium";

@@ -33,4 +33,10 @@ class PImages {
   static const String subscriptionIcon = "assets/icons/subscription-icon.png";
   static const String aboutUsIcon = "assets/icons/about-us-icon.png";
   static const String logoutIcon = "assets/icons/logout-icon.png";
+
+  // -- Animations
+  static const String doctorAnimation = "assets/images/animations/doctor-animation.json";
+  static const String successfulAnimation = "assets/images/animations/successful-animation.json";
+
+  static const String verifyEmail = "assets/images/verify-email.png";
 }

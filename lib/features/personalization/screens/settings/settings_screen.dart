@@ -1,10 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:parent_internet_lock/common/widgets/smart_dialogs/enter_name_popup.dart';
 import 'package:parent_internet_lock/common/widgets/smart_dialogs/logout_popup.dart';
+import 'package:parent_internet_lock/features/authentication/controller/user_controller.dart';
 import 'package:parent_internet_lock/features/authentication/screens/other_person_login/other_person_login.dart';
 import 'package:parent_internet_lock/features/authentication/screens/password_configuration/enter_pin.dart';
+import 'package:parent_internet_lock/features/personalization/screens/settings/scanner/qr_scanner_screen.dart';
 import 'package:parent_internet_lock/features/personalization/screens/settings/subscription/subscription.dart';
 import 'package:parent_internet_lock/features/personalization/screens/settings/widgets/settings_manu_tile.dart';
 import 'package:parent_internet_lock/utils/constants/image_strings.dart';
@@ -18,8 +22,9 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    final controller = Get.put(UserController());
 
+    return Scaffold(
       /// AppBar
         appBar: const PAppBar(
           title: Text(
@@ -36,7 +41,6 @@ class SettingsScreen extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      // const SizedBox(height: 10),
 
                       /// Setting Tiles
                       PSettingsMenuTile(
@@ -52,40 +56,39 @@ class SettingsScreen extends StatelessWidget {
                           );
                         },
                       ),
-                      const SizedBox(height: 10),
 
                       PSettingsMenuTile(
                         prefixImage: PImages.keyIcon,
                         title: 'Change PIN',
                         onTap: () => Get.to(() => const EnterPinScreen()),
                       ),
-                      const SizedBox(height: 10),
 
-                      const PSettingsMenuTile(
+                      PSettingsMenuTile(
                         prefixImage: PImages.shareQRIcon,
                         title: 'Share QR code',
+                        onTap: () {
+                          Get.to(() => OtherPersonLoginScreen(qrData: jsonEncode(controller.user.toJson()),));
+                        },
                       ),
-                      const SizedBox(height: 10),
 
                       PSettingsMenuTile(
                         prefixImage: PImages.scanQRIcon,
                         title: 'Scan QR code',
-                        onTap: () => Get.to(() => const OtherPersonLoginScreen()),
+                        onTap: () {
+                          Get.to(() => QRScannerScreen());
+                        },
                       ),
-                      const SizedBox(height: 10),
 
                       PSettingsMenuTile(
                         prefixImage: PImages.subscriptionIcon,
                         title: 'Subscription',
                         onTap: () => Get.to(() => SubscriptionScreen()),
                       ),
-                      const SizedBox(height: 10),
 
                       const PSettingsMenuTile(
                         prefixImage: PImages.aboutUsIcon,
                         title: 'About us',
                       ),
-                      const SizedBox(height: 10),
 
                       PSettingsMenuTile(
                         prefixImage: PImages.logoutIcon,

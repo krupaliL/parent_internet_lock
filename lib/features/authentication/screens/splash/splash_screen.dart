@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:parent_internet_lock/features/authentication/screens/login/login.dart';
+import 'package:parent_internet_lock/features/authentication/controller/splash/splash_controller.dart';
 import 'package:parent_internet_lock/utils/constants/colors.dart';
 import 'package:parent_internet_lock/utils/constants/image_strings.dart';
 import 'package:parent_internet_lock/utils/constants/text_strings.dart';
@@ -10,6 +10,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SplashController());
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -43,7 +45,7 @@ class SplashScreen extends StatelessWidget {
                 ],
               ),
               child: ElevatedButton(
-                onPressed: () => Get.to(() => const LoginScreen()),
+                onPressed: () => controller.nextPage(),
                 child: const Row(
                   children: [
                     Spacer(),

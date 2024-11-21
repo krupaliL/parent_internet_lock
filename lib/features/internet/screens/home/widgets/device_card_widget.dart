@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:parent_internet_lock/features/authentication/models/user_model.dart';
 
 import '../../../../../utils/constants/colors.dart';
 
@@ -7,19 +8,10 @@ import '../../../../../utils/constants/colors.dart';
 class PDeviceCard extends StatelessWidget {
   const PDeviceCard({
     super.key,
-    required this.name,
-    required this.device,
-    required this.status,
-    required this.isOnline,
-    required this.backgroundColor,
+   required this.userModel,
   });
 
-  final String name;
-  final String device;
-  final String status;
-  final bool isOnline;
-  final Color backgroundColor;
-
+final UserModel userModel;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -27,7 +19,7 @@ class PDeviceCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),
-      color: backgroundColor,
+      color: userModel.isConnected ? Colors.green.shade100:Colors.grey.shade300,
       margin: const EdgeInsets.symmetric(vertical: 10.0),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -40,7 +32,7 @@ class PDeviceCard extends StatelessWidget {
 
                 /// Name of user
                 Text(
-                  name,
+                  userModel.name,
                   style: const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 16.0, color: PColors.black),
                 ),
 
@@ -49,7 +41,7 @@ class PDeviceCard extends StatelessWidget {
 
                     /// Device Name
                     Text(
-                      device,
+                      userModel.deviceName,
                       style: const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 12.0, color: PColors.black50),
                     ),
                     const SizedBox(width: 10),
@@ -69,7 +61,7 @@ class PDeviceCard extends StatelessWidget {
 
                 /// Internet Status (enable/disable)
                 Text(
-                  isOnline ? status : '',
+                  userModel.isConnected ? "Internet Disable" : '',
                   style: const TextStyle(fontFamily: 'LexendDeca', fontWeight: FontWeight.w400, fontSize: 12.0, color: PColors.internetColor),
                 ),
                 // const SizedBox(height: 8),
@@ -83,7 +75,7 @@ class PDeviceCard extends StatelessWidget {
                       // iconSize: 24,
                       onPressed: () {},
                       icon: const Icon(Icons.power_settings_new_rounded),
-                      color: isOnline ? PColors.internetColor : PColors.black50,
+                      color: userModel.isConnected ? PColors.internetColor : PColors.black50,
                     ),
                     // const SizedBox(width: 16),
 

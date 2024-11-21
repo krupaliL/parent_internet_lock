@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:parent_internet_lock/utils/constants/colors.dart';
 
+import '../../../features/authentication/controller/login/login_controller.dart';
 import '../../../utils/validators/validation.dart';
 
 class PPasswordFieldWidget extends StatelessWidget {
@@ -9,17 +11,19 @@ class PPasswordFieldWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.prefixIcon,
-    // required this.suffixIcon,
     required this.validateText,
+    this.controller,
   });
 
   final String title;
   final IconData prefixIcon;
-  // final IconData suffixIcon;
   final String validateText;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 2),
       child: Column(
@@ -58,15 +62,24 @@ class PPasswordFieldWidget extends StatelessWidget {
                 ),
                 const SizedBox(width: 12),
                 Expanded(
-                  child: TextFormField(
-                    validator: (value) => PValidator.validateEmptyText(validateText, value),
-                    obscureText: true,
-                    style: const TextStyle(
-                      color: PColors.primary,
-                      fontSize: 13,
-                      fontFamily: 'LexendDeca', fontWeight: FontWeight.w400,
+                  child: Obx(
+                    () => TextFormField(
+                      controller: controller.password,
+                      validator: (value) => PValidator.validateEmptyText(validateText, value),
+                      obscureText: true,
+                      style: const TextStyle(
+                        color: PColors.primary,
+                        fontSize: 13,
+                        fontFamily: 'LexendDeca', fontWeight: FontWeight.w400,
+                      ),
+                      decoration: InputDecoration(
+                        suffixIcon: IconButton(
+                          onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                          icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
+                        ),
+                      ),
+                      cursorColor: PColors.primary,
                     ),
-                    cursorColor: PColors.primary,
                   ),
                 ),
                 const SizedBox(width: 12),

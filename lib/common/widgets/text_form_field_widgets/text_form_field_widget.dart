@@ -8,12 +8,16 @@ class PTextFormFieldWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.prefixIcon,
-    required this.validateText,
+    this.validateText,
+    this.controller,
+    this.isEmail = false,
   });
 
   final String title;
   final IconData prefixIcon;
-  final String validateText;
+  final String? validateText;
+  final bool isEmail;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +63,15 @@ class PTextFormFieldWidget extends StatelessWidget {
                 const SizedBox(width: 12),
                 Expanded(
                   child: TextFormField(
-                    validator: (value) => PValidator.validateEmptyText(validateText, value),
+                    controller: controller,
+                    validator: (value) {
+                      if(isEmail) {
+                        return PValidator.validateEmail(value);
+                      } else {
+                        return PValidator.validateEmptyText(validateText, value);
+                      }
+
+                    },
                     style: const TextStyle(
                       color: PColors.primary,
                       fontSize: 13,

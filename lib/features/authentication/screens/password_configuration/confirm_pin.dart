@@ -13,20 +13,22 @@ class ConfirmPinScreen extends StatelessWidget {
     return const Scaffold(
       body: Padding(
         padding: PSpacingStyle.paddingWithAppBarHeight,
-        child: Column(
-          children: [
-            SizedBox(height: 20.0),
-            /// Enter PIN Image
-            Image(image: AssetImage(PImages.enterOtp)),
-            SizedBox(height: 30.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 20.0),
+              /// Enter PIN Image
+              Image(image: AssetImage(PImages.enterOtp)),
+              SizedBox(height: 30.0),
 
-            /// Enter PIN
-            PPinputWidgetWithTitle(title: PTexts.enterNewPIN),
-            SizedBox(height: 20.0),
+              /// Enter PIN
+              PPinputWidgetWithTitle(title: PTexts.enterNewPIN),
+              SizedBox(height: 20.0),
 
-            /// Confirm PIN
-            PPinputWidgetWithTitle(title: PTexts.confirmPIN),
-          ],
+              /// Confirm PIN
+              PPinputWidgetWithTitle(title: PTexts.confirmPIN),
+            ],
+          ),
         ),
       ),
     );

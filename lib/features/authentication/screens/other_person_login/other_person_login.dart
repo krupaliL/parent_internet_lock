@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:parent_internet_lock/common/widgets/smart_dialogs/free_trial_popup.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/text_strings.dart';
 
 class OtherPersonLoginScreen extends StatelessWidget {
-  const OtherPersonLoginScreen({super.key});
+  const OtherPersonLoginScreen({
+    super.key,
+    required this.qrData,
+  });
+
+  final String qrData;
 
   @override
   Widget build(BuildContext context) {
@@ -41,20 +44,12 @@ class OtherPersonLoginScreen extends StatelessWidget {
             const SizedBox(height: 70),
 
             /// QR Code
-            GestureDetector(
-              onTap: () {
-                // Show the custom dialog
-                SmartDialog.show(
-                  builder: (_) {
-                    return const FreeTrialPopup();
-                  },
-                );
-              },
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: Image(height: 260, width: 260, image: AssetImage(PImages.qrCode)),
-              ),
+            QrImageView(
+              size: 240,
+              data: qrData,
+              version: QrVersions.auto,
             ),
+            // const SizedBox(height: 30),
           ],
         ),
       ),
