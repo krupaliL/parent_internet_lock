@@ -1,6 +1,10 @@
+import 'dart:developer';
+
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:parent_internet_lock/data/repositories/user/user_repository.dart';
 
 import '../../../../data/repositories/authentication/authentication_repository.dart';
 import '../../../../utils/constants/image_strings.dart';
@@ -41,6 +45,14 @@ class LoginController extends GetxController {
 
       // Login user using EMail & Password Authentication
       final userCredential = await AuthenticationRepository.instance.loginWithEmailAndPassword(email.text.trim(), password.text.trim());
+
+      final userRepository = Get.put(UserRepository());
+      final String? deviceTokenString = await FirebaseMessaging.instance.getToken();
+      // Map<String, dynamic> deviceToken = {'DeviceToken': deviceTokenString?.trim()};
+
+      Map<String, dynamic> deviceToken = {'DeviceToken': deviceTokenString};
+      log("${deviceToken}", name: "LoginToken");
+      await userRepository.updateSingleField(deviceToken);
 
       // Remove Loader
       PFullScreenLoader.stopLoading();

@@ -109,8 +109,6 @@ class UserRepository extends GetxController {
   Future<void> updateSingleField(Map<String, dynamic> json) async {
     try {
       await _db.collection("Users").doc(userId).update(json);
-
-      await _db.collection("Users").doc(userId).collection("My Devices").doc().update(json);
     } on FirebaseException catch (e) {
       throw e.toString();
     } on FormatException catch (e) {

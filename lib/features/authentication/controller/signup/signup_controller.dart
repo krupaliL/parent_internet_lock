@@ -107,7 +107,7 @@ class SignupController extends GetxController {
 
     // Check for minimum password length
     if (value != password.text) {
-      return 'Confirmed Password do not match Password';
+      return 'Confirmed Password doesn\'t match Password';
     }
 
     return null;

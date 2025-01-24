@@ -37,6 +37,7 @@ class UserModel {
   /// Convert model to JSON structure for storing data in Firebase.
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'Name': name,
       'Email': email,
       'DeviceToken': deviceToken,
