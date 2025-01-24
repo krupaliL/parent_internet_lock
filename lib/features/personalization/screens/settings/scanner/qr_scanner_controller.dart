@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:parent_internet_lock/features/authentication/controller/user_controller.dart';
 import 'package:parent_internet_lock/features/internet/controllers/home_controller.dart';
-import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 
 import '../../../../../data/repositories/authentication/authentication_repository.dart';
 import '../../../../../navigation_menu.dart';

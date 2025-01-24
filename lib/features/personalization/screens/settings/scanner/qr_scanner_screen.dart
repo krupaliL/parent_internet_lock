@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:parent_internet_lock/utils/constants/colors.dart';
-import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import 'qr_scanner_controller.dart';
 
