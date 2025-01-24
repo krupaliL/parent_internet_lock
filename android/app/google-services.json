@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "603340858071",
+    "project_id": "parent-internet-lock",
+    "storage_bucket": "parent-internet-lock.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603340858071:android:782fe75581767075278692",
+        "android_client_info": {
+          "package_name": "com.example.parent_internet_lock"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtLnbQ-_MoPp4N8fN7E1XCoUvYYCfRECk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
